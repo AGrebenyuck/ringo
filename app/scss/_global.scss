@@ -62,10 +62,26 @@ body{
   font-size: 16px;
   line-height: 23px;
   max-width: 1600px;
+
 }
 
 .container{
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 58px;
+  text-align: center;
+  &__white{
+    font-family: 'Raleway', sans-serif;
+    font-size: 46px;
+    line-height: 58px;
+    text-align: center;
+    color: #fff;
+  }
 }
