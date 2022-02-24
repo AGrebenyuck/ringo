@@ -1,0 +1,16 @@
+//colors
+$default: #282B22;
+$green: #3D4A39;
+$brown: #AE7B3C;
+$grey: #F3F3F3;
+$whitebg: rgba(#fff, .5);
+
+//fonts
+%Lato-600{
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+%Lato-500{
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
