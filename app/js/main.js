@@ -1,5 +1,15 @@
 $(function(){
 
+  
+  const swiper3 = new Swiper('.partners__slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
   const swiper2 = new Swiper('.current__slider', {
     slidesPerView: 2.4,
     initialSlide: 1,
