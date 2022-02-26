@@ -1,33 +1,15 @@
 $(function(){
 
-  // $('.benefits__item').on({
-  //   mouseenter: function(){
-  //     $($(this)).addClass('benefits__item--active');
-  //     $($(this)).on('mousemove', function(e){
-  //       // console.log(this);
-  //       var x,y,offset,widthEl,heightEl;
-
-  //       widthEl = $($(this).find('.benefits__item-img')).width() / 2;
-  //       heightEl = $($(this).find('.benefits__item-img')).height() / 2;
-  //       offset = $(this).offset();
-  //       x = e.pageX - offset.left - widthEl;
-  //       y = e.pageY - offset.top - heightEl;
-  //       x = x + 'px';
-  //       y = y + 'px';
-  //       // console.log(x +' '+ y);
-
-
-  //       $($(this).find('.benefits__item-img')).css({'left':`${x}`, 'top': `${y}`});
-  //     })
-  //   },
-  //   mouseleave: function(){
-  //     console.log(this);
-  //     $('.benefits__item').removeClass('benefits__item--active');
-  //     console.log('leave');
-  //   },
-    
-  // })
-
+  const swiper2 = new Swiper('.current__slider', {
+    slidesPerView: 2.4,
+    initialSlide: 1,
+    spaceBetween: 60,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
   $('.benefits__item').on({
     mouseenter: function(){
@@ -53,7 +35,7 @@ $(function(){
   })
 
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.header-slider__container', {
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
