@@ -35,6 +35,11 @@
     padding-left: 29px;
     margin-left: 63px;
     position: relative;
+    transition: all .3s;
+    &:hover{
+      color: $brown;
+      filter: drop-shadow(0px 4px 4px rgba($brown,0.25));
+    }
     &::before{
       content: '';
       position: absolute;
@@ -407,7 +412,7 @@
   }
 }
 
-.discuss {
+.section-form {
   background-color: $green;
   &__inner {
     display: flex;
@@ -463,6 +468,9 @@
     &::placeholder{
       color: #E11616;
     }
+  }
+  &__input--margin{
+    margin-bottom: 40px;
   }
   &__link {
     display: inline-block;
@@ -681,7 +689,6 @@
     flex-direction: column;
     align-items: center;
   }
-  &__item-img {}
   &__item-text {
     padding-left: 28px;
     position: relative;
@@ -785,6 +792,157 @@
     left: calc(50% - 35px);
   }
 }
+
+.question {
+  background-color: $green;
+  &__inner {
+    display: flex;
+  }
+  &__wrapper {
+    max-width: 800px;
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.footer {
+  padding-top: 140px;
+}
+.footer-top {
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgba($default, .2);
+  &__inner{
+    display: flex;
+  }
+  &__item--social{
+    margin-right: 243px;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba($default, .5);
+  }
+  &__social {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+  }
+  &__social-links{
+    margin-left: 14px;
+    display: flex;
+  }
+  &__social-link {
+    margin-right: 7px;
+    path{
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: $default;
+      }
+    }
+  }
+  &__list + .footer-top__list{
+    margin-left: 86px;
+  }
+  &__list-item + .footer-top__list-item{
+    margin-top: 30px;
+  }
+  &__list-link {
+    line-height: 16px;
+    color: $default;
+    transition: all .3s;
+    &:hover{
+      color: $brown;
+    }
+  }
+  &__item--feedback{
+    margin-left: auto;
+  }
+  &__item-link {
+    display: inline-block;
+    width: 280px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: $brown;
+    line-height: 16px;
+    font-weight: 700;
+    transition: all .3s;
+    &:hover{
+      background-color: #CC9654;
+    }
+  }
+  &__item-link--tel {
+    display: inline-block;
+    padding-left: 29px;
+    margin-bottom: 30px;
+    position: relative;
+    color: $green;
+    text-transform: uppercase;
+    @extend %Lato-600;
+    transition: all .3s;
+    &:hover{
+      color: $brown;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background-image: url('../images/icons/phone.svg');
+      left: 0;
+      top: 0;
+    }
+  }
+}
+.footer-brand {
+  padding-top: 40px;
+  &__title {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 38px;
+    color: $green;
+  }
+  .footer-brand__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  &__item {
+    filter: grayscale(1);
+    transition: all .3s;
+    &:hover{
+      filter: grayscale(0);
+    }
+  }
+}
+
+.footer-copy {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 40px;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba($default, .5);
+  border-top: 1px solid rgba($default, .2);
+  &__link {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba($default, .5);
+    transition: all .3s;
+    &:hover{
+      color: $default;
+    }
+  }
+}
+
+
 
 
 
