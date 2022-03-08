@@ -7,13 +7,15 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const Parallax  = require("parallax-js");
 
 function browsersync(){
   browserSync.init({
     server: {
       baseDir: 'app/'
     },
-    notify: false
+    notify: false,
+    host: "192.168.1.105"
   })
 }
 
@@ -35,6 +37,8 @@ function scripts(){
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    'node_modules/parallax-js/dist/parallax.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

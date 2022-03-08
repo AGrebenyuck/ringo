@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 *,
@@ -51,6 +54,7 @@ select {
 a {
   text-decoration: none;
 }
+
 // font-family: 'Lato', sans-serif;
 // font-family: 'Raleway', sans-serif;
 
@@ -61,8 +65,20 @@ body{
   color: $default;
   font-size: 16px;
   line-height: 23px;
-  max-width: 1600px;
+  // max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
 
+.main{
+  flex-grow: 1;
+  &--fixed{
+    padding-top: 93px;
+  }
 }
 
 .container{
@@ -83,6 +99,27 @@ body{
     font-size: 46px;
     line-height: 58px;
     text-align: center;
+    color: #fff;
+  }
+}
+
+.popup{
+  max-width: 450px;
+  background-color: $green;
+  padding: 60px 65px 65px 55px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  .form{
+    margin: 0 auto;
+    &__title{
+      text-align: center;
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+  .mfp-close{
+    right: -43px;
     color: #fff;
   }
 }
